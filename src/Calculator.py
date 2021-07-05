@@ -19,5 +19,9 @@ class Calculator:
         self.result = a / b
         return self.result
 
+    def square(self,a):
+        self.result = a * a
+        return self.result
+
     def __init__(self):
         pass

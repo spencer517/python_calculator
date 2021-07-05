@@ -24,5 +24,10 @@ class MyTestCase(unittest.TestCase):
         cal = Calculator()
         self.assertEqual(cal.divide(6,3),2)
 
+    def test_calc_square(self):
+        cal = Calculator()
+        self.assertEqual(cal.square(3),9)
+
+
 if __name__ == '__main__':
     unittest.main()
