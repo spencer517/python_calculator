@@ -1,3 +1,6 @@
+import math
+
+
 class Calculator:
     result = 0
 
@@ -21,6 +24,11 @@ class Calculator:
 
     def square(self,a):
         self.result = a * a
+        return self.result
+
+    def squareroot(self, a):
+        a = float(a)
+        self.result = math.sqrt(a)
         return self.result
 
     def __init__(self):
