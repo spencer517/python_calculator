@@ -8,5 +8,9 @@ class MyTestCase(unittest.TestCase):
         calculator = Calculator()
         self.assertIsInstance(calculator, Calculator)
 
+    def test_calc_add(self):
+        cal = Calculator()
+        self.assertEqual(cal.add(3,2),5)
+
 if __name__ == '__main__':
     unittest.main()
