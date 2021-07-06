@@ -9,6 +9,8 @@ class Calculator:
         return self.result
 
     def subtract(self,a,b):
+        a = int(a)
+        b = int(b)
         self.result = a - b
         return self.result
 
@@ -20,7 +22,7 @@ class Calculator:
         a = float(a)
         b = float(b)
         self.result = a / b
-        return self.result
+        return round(self.result,6)
 
     def square(self,a):
         self.result = a * a
@@ -29,7 +31,7 @@ class Calculator:
     def squareroot(self, a):
         a = float(a)
         self.result = math.sqrt(a)
-        return self.result
+        return round(self.result,3)
 
     def __init__(self):
         pass
