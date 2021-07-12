@@ -8,5 +8,5 @@ script:
 
 branches:
   only:
-    -master
-    -stat_calculator
+    - master
+    - stat_calculator
