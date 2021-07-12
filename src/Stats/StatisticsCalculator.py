@@ -1,4 +1,4 @@
-from Calculator import Calculator
+from Calculator.Calculator import Calculator
 
 class StatisticsCalculator(Calculator):
     result = 0

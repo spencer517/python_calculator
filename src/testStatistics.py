@@ -1,6 +1,6 @@
-import statistics
 import unittest
-from StatisticsCalculator import StatisticsCalculator
+import statistics
+from Stats.StatisticsCalculator import StatisticsCalculator
 
 class StatisticsTest(unittest.TestCase):
 
