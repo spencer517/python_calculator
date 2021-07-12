@@ -8,4 +8,4 @@ script:
 
 branches:
   only:
-    -Statistics_Calculator
+    -stat_calculator
