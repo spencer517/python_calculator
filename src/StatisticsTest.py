@@ -27,10 +27,17 @@ class StatisticsTest(unittest.TestCase):
     #     self.assertEqual(self.stat_cal.mode(nums),3)
 
     def test_variance(self):
-        varlist = [1,3,7,9,11,24,30]
-        var = statistics.variance(varlist)
-        var2 = self.stat_cal.variance(varlist)
+        nums = [1,3,7,9,11,24,30]
+        var = statistics.variance(nums)
+        var2 = self.stat_cal.variance(nums)
         self.assertEqual(round(var2,1),round(var,1))
+
+    def test_std_dev(self):
+        nums = [1, 3, 7, 9, 11, 24, 30]
+        dev1 = statistics.stdev(nums)
+        dev2 = self.stat_cal.stddev(nums)
+        self.assertEqual(round(dev2, 2), round(dev1, 2))
+
 
 if __name__ == '__main__':
     unittest.main()

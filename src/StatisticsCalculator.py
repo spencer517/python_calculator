@@ -41,7 +41,9 @@ class StatisticsCalculator(Calculator):
 
 
     def stddev(self,numbers):
-        pass
+        var = self.variance(numbers)
+        self.result = Calculator.squareroot(self, var)
+        return self.result
 
     def variance(self, numbers):
         length = len(numbers)
