@@ -28,13 +28,32 @@ class StatisticsCalculator(Calculator):
         except ZeroDivisionError:
             print("Error: Please use a list that contains at least 1 number")
 
-    def mode(self):
+    def mode(self, numbers):
+        try:
+            length = len(numbers)
+            self.numlist = numbers
+            count = 0
+
+            return 2
+        except:
+            Exception
+            print("error")
+
+
+    def stddev(self,numbers):
         pass
 
-    def stddev(self):
-        pass
-
-    def variance(self):
+    def variance(self, numbers):
+        length = len(numbers)
+        varmean = self.mean(numbers)
+        var = 0
+        try:
+            for i in numbers:
+                var += Calculator.square(self, Calculator.subtract(self,i, varmean))
+            self.result = Calculator.divide(self, var, length-1)
+            return self.result
+        except ZeroDivisionError:
+            print("Error can't divide by zero")
         pass
 
     def __init__(self):
