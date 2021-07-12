@@ -1,5 +1,5 @@
 ## Travis
-[![Build Status](https://travis-ci.com/github/spencer517/python_calculator?branch=stat_calculator)](https://travis-ci.com/spencer517/python_calculator?branch=stat_calculator)
+[![Build Status](https://travis-ci.com/spencer517/python_calculator.svg?branch=stat_calculator)]
 
 This is a calculator that was made using python and source controlled using git.
 The calculator can perform addition, subtraction, multiplication, division, squaring a number, and finding the square root of a number.
