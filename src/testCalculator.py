@@ -27,7 +27,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.multiply(int(row['Value 1']), int(row['Value 2'])), int(row['Result']))
 
     def test_csv_divide(self):
-        reader = CsvReader('/src/Division.csv').data
+        reader = CsvReader('./src/Division.csv').data
         for row in reader:
             self.assertEqual(self.calculator.divide(float(row['Value 1']), float(row['Value 2'])), round(float(row['Result']),6))
 
