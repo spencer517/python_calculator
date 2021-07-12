@@ -18,7 +18,10 @@ class StatisticsCalculator(Calculator):
             length = len(numbers)
             self.numlist = numbers
             if length % 2 == 0:
-                print("even list")
+                num1 = self.numlist[int(length/2)]
+                num2 = self.numlist[int(Calculator.subtract(self,(length/2),1))]
+                self.result = Calculator.divide(self,Calculator.add(self, num1, num2), 2)
+                return self.result
             else:
                 self.result = self.numlist[int(Calculator.divide(self, length ,2))]
                 return self.result

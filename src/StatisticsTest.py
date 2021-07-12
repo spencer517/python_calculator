@@ -17,6 +17,10 @@ class StatisticsTest(unittest.TestCase):
         nums = [1 , 2, 3]
         self.assertEqual(self.stat_cal.median(nums),2)
 
+    def test_even_median(self):
+        nums = [1 , 2, 3 , 4]
+        self.assertEqual(self.stat_cal.median(nums),2.5)
+
 
 if __name__ == '__main__':
     unittest.main()
