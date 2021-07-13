@@ -1,18 +1,20 @@
 import unittest
 import statistics
 from Stats.StatisticsCalculator import StatisticsCalculator
+from Random.Rand import Rand
 
 class StatisticsTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.stat_cal = StatisticsCalculator()
+        self.rand = Rand()
 
     def test_inst_stat_calculator(self):
         self.assertIsInstance(self.stat_cal, StatisticsCalculator)
 
     def test_mean(self):
-        nums = [1 , 2]
-        self.assertEqual(self.stat_cal.mean(nums),1.5)
+        nums = self.rand.genRandIntListWithSeed(1, 10, 10)
+        self.assertEqual(self.stat_cal.mean(nums),statistics.mean(nums))
 
     def test_median(self):
         nums = [1 , 2, 3]
@@ -27,16 +29,16 @@ class StatisticsTest(unittest.TestCase):
     #     self.assertEqual(self.stat_cal.mode(nums),3)
 
     def test_variance(self):
-        nums = [1,3,7,9,11,24,30]
+        nums = self.rand.genRandIntListWithSeed(1, 50, 10)
         var = statistics.variance(nums)
         var2 = self.stat_cal.variance(nums)
-        self.assertEqual(round(var2,1),round(var,1))
+        self.assertEqual(round(var2,0),round(var,0))
 
     def test_std_dev(self):
-        nums = [1, 3, 7, 9, 11, 24, 30]
+        nums = self.rand.genRandIntListWithSeed(1, 20, 10)
         dev1 = statistics.stdev(nums)
         dev2 = self.stat_cal.stddev(nums)
-        self.assertEqual(round(dev2, 2), round(dev1, 2))
+        self.assertEqual(round(dev2, 0), round(dev1, 0))
 
 
 if __name__ == '__main__':
