@@ -29,7 +29,7 @@ class StatisticsTest(unittest.TestCase):
     #     self.assertEqual(self.stat_cal.mode(nums),3)
 
     def test_variance(self):
-        nums = self.rand.genRandIntListWithSeed(1, 50, 10)
+        nums = self.rand.genRandIntListWithSeed(1, 50, 5)
         var = statistics.variance(nums)
         var2 = self.stat_cal.variance(nums)
         self.assertEqual(round(var2,0),round(var,0))

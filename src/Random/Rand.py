@@ -35,7 +35,7 @@ class Rand:
             i+=1
         return randList
 
-    def genFloatIntListWithSeed(self, num1, num2, listSize):
+    def genRandFloatListWithSeed(self, num1, num2, listSize):
         randList = []
         random.seed()
         i =0
@@ -43,4 +43,4 @@ class Rand:
             randNum = random.uniform(num1, num2)
             randList.append(randNum)
             i+=1
-        return randNum
+        return randList
