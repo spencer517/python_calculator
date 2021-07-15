@@ -24,9 +24,12 @@ class StatisticsTest(unittest.TestCase):
         nums = [1 , 2, 3 , 4]
         self.assertEqual(self.stat_cal.median(nums),2.5)
 
-    # def test_mode(self):
-    #     nums = [1, 2, 3, 3, 3, 4, 5]
-    #     self.assertEqual(self.stat_cal.mode(nums),3)
+    def test_mode(self):
+        nums = self.rand.genRandIntListWithSeed(1, 20, 10)
+        list = self.stat_cal.mode(nums)
+        for i in list:
+            mode = i
+        self.assertEqual(mode,statistics.mode(nums))
 
     def test_variance(self):
         nums = self.rand.genRandIntListWithSeed(1, 50, 5)

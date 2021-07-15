@@ -1,4 +1,5 @@
 from Calculator.Calculator import Calculator
+from collections import Counter
 
 class StatisticsCalculator(Calculator):
     result = 0
@@ -35,16 +36,14 @@ class StatisticsCalculator(Calculator):
             print("Please enter only numbers.")
 
     def mode(self, numbers):
-        pass
-        # try:
-        #     length = len(numbers)
-        #     self.numlist = numbers
-        #     count = 0
-        #
-        #     return 2
-        # except:
-        #     Exception
-        #     print("error")
+        try:
+            count = Counter(numbers)
+            self.result=[i for i, obs in count.items() if obs == count.most_common(1)[0][1]]
+            return self.result
+        except ZeroDivisionError:
+            print("Error: Please use a list that contains at least 1 number")
+        except TypeError:
+            print("Please enter only numbers.")
 
 
     def stddev(self,numbers):
